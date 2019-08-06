@@ -1,0 +1,31 @@
+Diagnosis, Code
+Amputation, 50
+Anoxia, 65
+Aspirated_object, 42
+Avulsion, 72
+Burns_scald, 48
+Burns_ thermal, 51
+Burns_chemical, 49
+Burns_radiation, 73
+Burns_electrical, 46
+Burns_other, 47
+Concussions, 52
+Contusions_Abrasions, 53
+Crushing, 54
+Dental_injury, 60
+Dermatitis_Conjunctivitis, 74
+Dislocation, 55
+Electric_shock, 67
+Foreign_body, 56
+Fracture, 57
+Hematoma, 58
+Hemorrhage, 66
+Ingested_object, 41
+Internal organ injury, 62
+Laceration, 59
+Nerve_damage, 61
+Poisoning, 68
+Puncture, 63
+Strain_Sprain, 64
+Submersion, 69
+Not_Stated, 71

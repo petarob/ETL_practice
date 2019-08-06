@@ -1,0 +1,66 @@
+Project Two
+
+Which Data?
+I decided that there were too many options with the podcasting datasets, and was unclear what data I could merge it with. 
+The mass shootings happened so I decide to follow the CDC link to gun death data
+to look at the number of deaths in the USA by firearm. 
+
+Downloading Options
+I learned that the CDC file is so large that are two options for getting it:
+1) Using SoQL paging parameters to iterate through the dataset, or 
+2) Download as a CSV file. 
+I decided to download the CSV file (I don't know how to use SoQL iterative).
+
+Description of Dataset
+The dataset comprised almost one million rows. I expected each row to be an observation
+But each row in the dataset was grouped by year, then by sex, then by age category, then by race. 
+Additonal rows were cumulative data -  all ages, all races, and both sexes and still grouped by year. 
+
+The dataset has 17 columns. Many of them I didn't need because I am focused only on who dies from firearms.
+I decided to keep Sex, Age (grouped), Race, Injury Intent (legal, suicide, homicide, unintentional)
+Deaths (number), Population (national population group as per row parameters).
+I will filter by Injury Mechanism - Firearm. Other Injury Mechanism fields included drowning, 
+falls, transport, cutting, fire, motor vehicle, posioning, suffocation. These other fields are not needed.
+
+The Second Dataset
+Speaking to Michael, we decided that the easist field to merge into a second dataset is "age". 
+I searched on Kaggle, and found a dataset authored by Chris Awram on US Product Related Injuries.
+I can look at how people of certain ages either die by firearm or get hurt by products. 
+The dataset is for 2015 only. So now I will filter the CDC dataset for 2015 only.
+The columns I will import are Age, Sex, Diagnosis (type of injury) and product (what products caused the harm)
+
+Pandas Steps. 
+1. Downloaded both CSV files.
+2. Read files  
+3. Checked columns
+
+For CDC Data
+Once dataframe was loaded, I filtered by 
+1. 2015
+2. Firearm
+3. Male | Female
+
+The result was an imperfect table. I had to go back and filter by race. 
+I split off the population figures that were for each sex, and grouped by Age into separate table.
+Then I deleted year / race / population
+
+
+For Awram database
+The "age" needed to be binned in same values for the CDC database.
+I ran a new query for CDC database to find the unique values of column Age group (years).
+But I had to rename this column "Age_group" because (years) was read as a function in the query. 
+Set up a new column called "Age_group"
+Discovered I still had an age range of "All Ages". Deciding whether to delete it or not
+
+Injury Database_New Table
+Imported from pdf>Notes>save .csv>Pandas a list of lookup diagnosis
+
+
+
+My Relational Database Figures
+Table 1 - population by Age_Group/Sex - extracted from CDC dataset
+Table 2 - product name
+Table 3 - Diagnosis, and add Firearms
+Table 4 - main table. Age group, Sex, new column Nature that references Firearm death / Product Injury
+
+

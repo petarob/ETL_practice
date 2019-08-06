@@ -1,0 +1,11 @@
+Injury Intent Code
+Assault / intentional injury (confirmed or suspected) 1
+Self-inflicted injury including suicide or suicide attempt
+(confirmed or suspected)
+2
+Injury related to legal intervention associated with
+firearms (due to law enforcement activity)
+3
+Unintentional (accidental) injury or injury intent not
+determined / not recorded
+0
