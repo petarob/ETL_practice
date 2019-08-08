@@ -1,4 +1,4 @@
-Diagnosis, Code
+diagnosis, code
 Amputation, 50
 Anoxia, 65
 Aspirated_object, 42
